@@ -17,8 +17,8 @@
 
     .centered {
       position: absolute;
-      top: 15%;
-      left: 50%;
+      top: 0%;
+      left: 30%;
       transform: translate(-50%, -50%);
       font-size: -webkit-xxx-large
     }
@@ -37,7 +37,7 @@
   </style>
   <script>
     (function () {
-      const imageNumber = Math.floor(Math.random() * 8) + 1;
+      let imageNumber = Math.floor(Math.random() * 8) + 1;
       const countDownDate = new Date("Apr 08, 2022 19:09:00").getTime();
       let x = setInterval(function () {
         var now = new Date().getTime();
@@ -50,11 +50,13 @@
 
 
         if (!seconds % 10) {
-          document.getElementById("img").innerHTML = "<img src=\"images/2.JPG\" class=\"image\">"
+          alert("replace image")
+          imageNumber = Math.floor(Math.random() * 8) + 1;
+          let replaceImage = "<img src=\"images/" + imageNumber + ".JPG\" class=\"image\">";
+          document.getElementById("img").innerHTML = replaceImage;
         }
 
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s " + + " : " + " מתחילים בעוד ";
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
         // If the count down is over, write some text 
         if (distance < 0) {
@@ -70,7 +72,7 @@
 <body>
   <div style="direcion: rtl;">
     <div class="container">
-      <h1 style=" text-align: center" id="headline">קרישר הפקות</h1>
+      <h1 style=" text-align: center" id="headline">מתחילים בעוד </h1>
       <div id="img">
         <img src="images/1.JPG" class="image">
       </div>
