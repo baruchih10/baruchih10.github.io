@@ -17,10 +17,13 @@
 
     .centered {
       position: absolute;
-      top: -2%;
-      left: 15%;
+      top: 3%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      font-size: -webkit-xxx-large
+      font-size: -webkit-xxx-large;
+      width: 200px;
+      height: 100px;
+      background: lightgoldenrodyellow;
     }
 
     .image {
@@ -50,7 +53,6 @@
 
 
         if (!(seconds % 10)) {
-          alert("replace image")
           imageNumber = Math.floor(Math.random() * 8) + 1;
           let replaceImage = "<img src=\"images/" + imageNumber + ".JPG\" class=\"image\">";
           document.getElementById("img").innerHTML = replaceImage;
