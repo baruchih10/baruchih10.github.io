@@ -13,8 +13,6 @@
     .container {
       position: relative;
       text-align: center;
-      width: 2048px;
-      height: 2048px;
     }
 
     .centered {
@@ -26,8 +24,7 @@
     }
 
     .image {
-      height: 60%;
-      width: 50%;
+      width: 100%;
     }
 
     .zoom {
@@ -40,6 +37,7 @@
   </style>
   <script>
     (function () {
+      const imageNumber = Math.floor(Math.random() * 8) + 1;
       const countDownDate = new Date("Apr 08, 2022 19:09:00").getTime();
       let x = setInterval(function () {
         var now = new Date().getTime();
@@ -51,8 +49,12 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
+        if (!seconds % 10) {
+          document.getElementById("img").innerHTML = "<img src=\"images/2.JPG\" class=\"image\">"
+        }
+
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
+          + minutes + "m " + seconds + "s " + + " : " + " מתחילים בעוד ";
 
         // If the count down is over, write some text 
         if (distance < 0) {
@@ -69,7 +71,9 @@
   <div style="direcion: rtl;">
     <div class="container">
       <h1 style=" text-align: center" id="headline">קרישר הפקות</h1>
-      <img src="images/IMG_1406.JPG" class="image">
+      <div id="img">
+        <img src="images/1.JPG" class="image">
+      </div>
       <p class="centered" id="countdown">
       <p class="zoom" id="zoomDetails" <a href="http://www.ynet.co.il"> </a>
       </p>
