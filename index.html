@@ -54,7 +54,7 @@
 
 
         if (!(seconds % 10)) {
-          imageNumber = Math.floor(Math.random() * 8) + 1;
+          imageNumber = Math.floor(Math.random() * imgList.length) + 1;
           let replaceImage = "<img src=\"images/" + imgList[imageNumber] + "\" class=\"image\">";
           // let replaceImage= "<img src=\"images/" + imageNumber + ".JPG\" class=\"image\">";
           document.getElementById("img").innerHTML = replaceImage;
