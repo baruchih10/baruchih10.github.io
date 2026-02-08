@@ -1,1 +1,2 @@
+[![Board Status](https://dev.azure.com/bhalamish10/922d5d3a-959d-4cc7-af38-337a1f48f47c/1cfc1170-6e19-43f1-8200-c70a85b5e4fa/_apis/work/boardbadge/9ed1bfc4-1139-4854-9082-0eb98a0f4377)](https://dev.azure.com/bhalamish10/922d5d3a-959d-4cc7-af38-337a1f48f47c/_boards/board/t/1cfc1170-6e19-43f1-8200-c70a85b5e4fa/Microsoft.RequirementCategory)
 # baruchih10.github.io
